@@ -1,0 +1,65 @@
+site: Thomas Countz
+url: https://thomascountz.com
+title: Thomas Countz
+description: Personal site of Thomas Countz
+twitter:
+  username: thomascountz
+  card: summary
+  creator: thomascountz
+author:
+  twitter: thomascountz
+  name: thomascountz
+  avatar:
+  email: thomascountz@gmail.com
+  url: https://thomascountz.com
+permalink: pretty
+
+baseurl: ""
+
+highlighter: rouge
+
+exclude:
+  - .jekyll-cache
+
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+excerpt_separator: "<!--more-->"
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:slug
+  memos:
+    output: true
+    permalink: /memo/:year/:month/:day/:slug
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "memos"
+    values:
+      layout: "memo"
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/tc.png

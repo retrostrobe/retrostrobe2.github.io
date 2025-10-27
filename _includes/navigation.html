@@ -1,0 +1,10 @@
+<header aria-hidden="true" class="titlebar">
+    <h1 class="logo"><a href={{site.baseurl}}/>{{ site.title }}</a></h1>
+    <nav role="navigation" aria-hidden="true">
+        {% for item in site.data.navigation.links %}
+        <a href="{{ item.url }}" {% if item.url == page.url %} class="active"{% endif %}>
+            {{ item.title }}
+        </a>
+        {% endfor %}
+    </nav>
+</header>
