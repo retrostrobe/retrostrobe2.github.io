@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<section class="posts">
+<h1>Tag #{{page.tag}}</h1>
+    <ul>
+      {% for post in site.documents %}
+      {% if post.tags contains page.tag %}
+      <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m-%d-%Y" }}</time>
+            &nbsp;{{ post.title }}
+        </a>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+
+</section>
